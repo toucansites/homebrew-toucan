@@ -1,15 +1,17 @@
 class Toucan < Formula
   desc "Toucan is a static site generator written in Swift"
   homepage "https://github.com/toucansites/toucan"
-  url "https://github.com/toucansites/toucan/archive/refs/tags/1.0.0-beta.4.tar.gz"
-  sha256 "NEEDS_THE_SHA256_of_the_1.0.0-beta.4"
   version "1.0.0-beta.4"
 
-  depends_on xcode: ["16.0", :build]
+  if OS.mac?
+    url "https://github.com/toucansites/toucan/archive/refs/tags/toucan-macos-1.0.0.beta.4.zip"
+    sha256 "mac_sha256_here"
+  elsif OS.linux?
+    url "https://github.com/toucansites/toucan/archive/refs/tags/toucan-linux-1.0.0.beta.4.zip"
+    sha256 "linux_sha256_here"
+  end
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release"
-
     bin.install ".build/release/toucan"
     bin.install ".build/release/toucan-generate"
     bin.install ".build/release/toucan-init"
