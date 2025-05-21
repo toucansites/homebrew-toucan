@@ -71,7 +71,7 @@ If you see a SHA256 mismatch or install issue:
 2. Clear Homebrew's cache:
 
    ```bash
-   rm -rf ~/Library/Caches/Homebrew/downloads/*
+   find ~/Library/Caches/Homebrew/downloads -type f -name '*toucan*' -delete
    ```
 
 3. Reinstall:
