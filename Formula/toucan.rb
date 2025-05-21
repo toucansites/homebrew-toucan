@@ -12,11 +12,11 @@ class Toucan < Formula
   end
 
   def install
-    bin.install ".build/release/toucan"
-    bin.install ".build/release/toucan-generate"
-    bin.install ".build/release/toucan-init"
-    bin.install ".build/release/toucan-serve"
-    bin.install ".build/release/toucan-watch"
+    bin.install "toucan"
+    bin.install "toucan-init"
+    bin.install "toucan-generate"
+    bin.install "toucan-serve"
+    bin.install "toucan-watch"
   end
 
   test do
