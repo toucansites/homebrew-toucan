@@ -1,14 +1,14 @@
 class Toucan < Formula
   desc "Toucan is a static site generator written in Swift"
   homepage "https://github.com/toucansites/toucan"
-  version "1.0.0-rc.1"
+  version "1.0.0-beta.6"
 
   if OS.mac?
-    url "https://github.com/toucansites/toucan/releases/download/1.0.0-rc.1/toucan-macos-1.0.0.rc.1.zip"
-    sha256 "2b72e8e64f51b36ddacf90117f290a92e2d582038dc583ebabd95716a2592aa4"
+    url "https://github.com/toucansites/toucan/releases/download/1.0.0-beta.6/toucan-macos-1.0.0.beta.6.zip"
+    sha256 "12863ce9d58d0b05cfe564c7ee89258569dac4c3221b48d5f761df7994bc0f66"
   elsif OS.linux?
-    url "https://github.com/toucansites/toucan/releases/download/1.0.0-rc.1/toucan-linux-1.0.0.rc.1.zip"
-    sha256 "00e8fd0f16b0204f5de9904553d3f264a6dc76e02f233af89d608487f6a143b5"
+    url "https://github.com/toucansites/toucan/releases/download/1.0.0-beta.6/toucan-linux-1.0.0.beta.6.zip"
+    sha256 "f80869892b4c23b46bae2d923b9dee6a0a03293ab4dedd56a6100fb14d696eea"
   end
 
   def install
@@ -22,4 +22,5 @@ class Toucan < Formula
   test do
     assert_match "Usage", shell_output("#{bin}/toucan --help")
   end
+  
 end
